@@ -1,53 +1,516 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Blog Disclaimer</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-    section { margin-bottom: 40px; }
-    h2 { border-bottom: 1px solid #ccc; padding-bottom: 5px; }
-    em { display: block; margin-top: 10px; color: #555; }
-    footer { border-top: 1px solid #ccc; padding-top: 10px; margin-top: 40px; font-size: 0.9em; color: #333; }
-    footer a { color: #0066cc; text-decoration: none; }
-  </style>
-</head>
-<body>
-  <h2>Blog Disclaimer Ustin M. Vaskin</h2>
-  <section id="english">
-    <h2>English</h2>
-    <p><strong>Disclaimer</strong><br>
-    The content on this blog is for informational and educational purposes only. The opinions expressed here are those of the author and do not constitute professional advice. While I strive to keep the information up to date and accurate, I make no representations or warranties&mdash;express or implied&mdash;about the completeness, accuracy, reliability, suitability, or availability of any content.</p>
-    <p>Any reliance you place on such information is strictly at your own risk. I will not be liable for any losses or damages arising from its use.</p>
-    <p>Please consult a qualified professional (e.g., a lawyer, accountant, doctor) before acting on any information you find here. All trademarks and copyrights mentioned remain the property of their respective owners.</p>
-    <em>This disclaimer is provided in accordance with Section 230 of the Communications Decency Act (47 U.S.C. § 230), the United States Copyright Act (Title 17, U.S.C.), and, for European users, Article 14 of the E‑Commerce Directive (2000/31/EC) and Article 6 of the Directive on Copyright in the Digital Single Market (EU 2019/790).</em>
-  </section>
-  <section id="norwegian">
-    <h2>Norsk (bokmål)</h2>
-    <p><strong>Ansvarsfraskrivelse</strong><br>
-    Innholdet på denne bloggen er kun for informasjons- og utdanningsformål. Meningene som uttrykkes her er forfatterens egne, og utgjør ikke profesjonelle råd. Selv om jeg streber etter å holde informasjonen oppdatert og nøyaktig, gir jeg ingen garantier&mdash;verken uttrykte eller underforståtte&mdash;om innholdets fullstendighet, nøyaktighet, pålitelighet, egnethet eller tilgjengelighet.</p>
-    <p>All bruk av slik informasjon er helt på egen risiko. Jeg er ikke ansvarlig for tap eller skader som måtte oppstå som følge av bruk av innholdet.</p>
-    <p>Vennligst konsulter en kvalifisert fagperson (for eksempel advokat, regnskapsfører eller lege) før du handler basert på informasjon du finner her. Alle varemerker og opphavsrettigheter som nevnes, tilhører sine respektive eiere.</p>
-    <em>Denne ansvarsfraskrivelsen er gitt i henhold til åndsverkloven (lov om opphavsrett til åndsverk) § 1 og markedsføringsloven § 6a.</em>
-  </section>
-  <section id="russian">
-    <h2>Русский</h2>
-    <p><strong>Отказ от ответственности</strong><br>
-    Содержимое этого блога предназначено исключительно для информационных и образовательных целей. Мнения, выраженные здесь, являются личными взглядами автора и не являются профессиональной консультацией. Хотя я стремлюсь поддерживать информацию актуальной и точной, я не даю никаких заявлений или гарантий&mdash;явных или подразумеваемых&mdash;относительно полноты, точности, надежности, пригодности или доступности любого содержимого.</p>
-    <p>Любое использование данной информации осуществляется на ваш собственный риск. Я не несу ответственности за любые убытки или вред, возникшие в результате её использования.</p>
-    <p>Пожалуйста, проконсультируйтесь с квалифицированным специалистом (например, юристом, бухгалтером или врачом) перед тем, как действовать на основе информации, представленной здесь. Все товарные знаки и авторские права, упомянутые здесь, принадлежат их законным владельцам.</p>
-    <em>Данный отказ от ответственности предоставлен в соответствии с частью IV «Гражданского кодекса Российской Федерации» (вопросы авторского права) и Федеральным законом от 07.07.2003 N 126‑ФЗ «О связи».</em>
-  </section>
-  <section id="chinese">
-    <h2>中文（简体）</h2>
-    <p><strong>免责声明</strong><br>
-    本博客中的内容仅用于信息和教育目的。此处表达的观点仅代表作者本人，不构成专业建议。尽管我会尽力保持信息的最新性和准确性，但对于任何内容的完整性、准确性、可靠性、适用性或可用性，我不作任何明示或暗示的陈述或保证。</p>
-    <p>您对该等信息的任何依赖均自行承担风险。我不对因使用这些信息而导致的任何损失或损害承担责任。</p>
-    <p>在根据此处信息采取任何行动之前，请咨询合格的专业人士（例如律师、会计师或医生）。所有提及的商标和版权均归其各自所有者所有。</p>
-    <em>本免责声明依据《中华人民共和国著作权法》和《中华人民共和国网络安全法》提供。</em>
-  </section>
-  <footer>
-    <p>Author: Ustin M. Vaskin &ndash; <a href="mailto:ustin.vaskin2011@gmail.com">ustin.vaskin2011@gmail.com</a></p>
-  </footer>
-</body>
+<!doctype html>
+<html lang="en" data-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Blog Disclaimer – Ustin M. Vaskin</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			:root {
+				--font-family: "Inter", "Arial", sans-serif;
+				--primary: #1976d2;
+				--primary-dark: #0d47a1;
+				--bg: #f9f9fb;
+				--text: #212121;
+				--muted: #6c757d;
+				--border: #e0e0e0;
+				--radius: 12px;
+				--shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+				--toggle-bg: #e3f2fd;
+			}
+
+			html[data-theme="dark"] {
+				--primary: #90caf9;
+				--primary-dark: #e3f2fd;
+				--bg: #181a1b;
+				--text: #f1f1f1;
+				--muted: #b0b0b0;
+				--border: #333;
+				--shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+				--toggle-bg: #2c2f30;
+			}
+
+			html {
+				scroll-behavior: smooth;
+				scroll-padding-top: 70px;
+			}
+			body {
+				font-family: var(--font-family);
+				background-color: var(--bg);
+				color: var(--text);
+				margin: 0 auto;
+				padding: 2rem 1.25rem;
+				max-width: 900px;
+				line-height: 1.8;
+			}
+
+			h2 {
+				font-size: 1.375rem;
+				font-weight: 600;
+				color: var(--primary-dark);
+				border-left: 4px solid var(--primary);
+				padding-left: 0.75rem;
+				margin-top: 2rem;
+				margin-bottom: 1rem;
+			}
+
+			html[data-theme="dark"] h2 {
+				color: var(--primary);
+				border-left-color: var(--primary-dark);
+			}
+
+			section {
+				background-color: #fff;
+				border-radius: var(--radius);
+				box-shadow: var(--shadow);
+				padding: 1.5rem 1.75rem;
+				margin-bottom: 2rem;
+			}
+
+			html[data-theme="dark"] section {
+				background-color: #242526;
+			}
+
+			em {
+				display: block;
+				margin-top: 1rem;
+				color: var(--muted);
+				font-size: 0.9rem;
+			}
+
+			footer {
+				border-top: 1px solid var(--border);
+				padding-top: 2rem;
+				margin-top: 4rem;
+				font-size: 0.9rem;
+				color: var(--muted);
+				text-align: center;
+			}
+
+			footer a {
+				color: var(--primary);
+				text-decoration: none;
+			}
+
+			#theme-toggle {
+				background-color: var(--toggle-bg);
+				color: var(--primary);
+				border: none;
+				font-size: 1rem;
+				cursor: pointer;
+				padding: 0.5rem 1.25rem;
+				border-radius: 999px;
+				transition:
+					background 0.3s ease,
+					color 0.3s ease;
+			}
+
+			#theme-toggle:hover {
+				background-color: var(--primary);
+				color: #fff;
+			}
+
+			/* NAVBAR */
+			.navbar {
+				background-color: var(--bg);
+				border-bottom: 1px solid var(--border);
+				position: sticky;
+				top: 0;
+				z-index: 1000;
+				padding: 0.75rem 1rem;
+			}
+
+			.nav-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.nav-brand {
+				font-weight: 600;
+				font-size: 1rem;
+				color: var(--text);
+			}
+
+			.nav-toggle {
+				background: none;
+				border: none;
+				font-size: 1.5rem;
+				cursor: pointer;
+				color: var(--primary);
+			}
+
+			.nav-overlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: var(--bg);
+				display: none;
+				flex-direction: column;
+				align-items: center;
+				padding-top: 4rem;
+				z-index: 9999;
+			}
+
+			.nav-overlay.open {
+				display: flex;
+			}
+
+			.nav-close {
+				position: absolute;
+				top: 1rem;
+				right: 1rem;
+				background: none;
+				border: none;
+				font-size: 2rem;
+				color: var(--primary);
+				cursor: pointer;
+			}
+
+			.nav-overlay-menu {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				align-items: center;
+			}
+
+			.nav-overlay-menu li a {
+				color: var(--primary);
+				text-decoration: none;
+				padding: 0.5rem 1rem;
+				background-color: var(--toggle-bg);
+				border-radius: var(--radius);
+			}
+
+			.nav-overlay-menu li a:hover {
+				background-color: var(--primary);
+				color: #fff;
+			}
+
+			/* CONTACT INFO */
+			.contact-info {
+				text-align: center;
+				font-size: 0.9rem;
+				margin-top: 2rem;
+				line-height: 1.6;
+			}
+
+			.contact-info strong {
+				font-weight: 600;
+			}
+
+			.contact-info a {
+				color: var(--primary);
+				text-decoration: none;
+			}
+
+			.contact-info span {
+				color: var(--muted);
+				font-size: 0.85rem;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar" aria-label="Main navigation">
+			<div class="nav-header">
+				<div class="nav-brand">Ustin M. Vaskin</div>
+				<button
+					class="nav-toggle"
+					onclick="toggleNav()"
+					aria-label="Toggle menu"
+				>
+					☰
+				</button>
+			</div>
+
+			<div id="mobile-menu" class="nav-overlay">
+				<button class="nav-close" onclick="toggleNav()" aria-label="Close menu">
+					✕
+				</button>
+
+				<ul class="nav-overlay-menu">
+					<li><a href="#english" onclick="toggleNav()">English</a></li>
+					<li><a href="#norwegian" onclick="toggleNav()">Norsk</a></li>
+					<li><a href="#russian" onclick="toggleNav()">Русский</a></li>
+					<li><a href="#german" onclick="toggleNav()">Deutsch</a></li>
+					<li><a href="#french" onclick="toggleNav()">Français</a></li>
+					<li><a href="#spanish" onclick="toggleNav()">Español</a></li>
+					<li><a href="#chinese" onclick="toggleNav()">中文</a></li>
+					<li><a href="#arabic" onclick="toggleNav()">العربية</a></li>
+				</ul>
+
+				<div style="margin-top: 2rem">
+					<button id="theme-toggle" aria-label="Toggle theme">
+						🌓 Theme Settings
+					</button>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Contact Info -->
+		<section class="contact-info">
+			<strong>Ustin M. Vaskin</strong><br />
+			<span>B.B.M · PG.Dip · M.C.S</span><br />
+			<a href="tel:+4798628758">+47 986 28 758</a> |
+			<a href="tel:+447729386491">+44 7729 386491</a><br />
+			<a href="mailto:ustin.vaskin2011@gmail.com">ustin.vaskin2011@gmail.com</a>
+		</section>
+
+		<!-- Disclaimers -->
+
+		<section id="english">
+			<h2>English</h2>
+			<p>
+				<strong>Disclaimer</strong><br />
+				The content on this blog is for informational and educational purposes
+				only. The opinions expressed here are those of the author and do not
+				constitute professional advice. While I strive to keep the information
+				up to date and accurate, I make no representations or
+				warranties&mdash;express or implied&mdash;about the completeness,
+				accuracy, reliability, suitability, or availability of any content.
+			</p>
+			<p>
+				Any reliance you place on such information is strictly at your own risk.
+				I will not be liable for any losses or damages arising from its use.
+			</p>
+			<p>
+				Please consult a qualified professional (e.g., a lawyer, accountant,
+				doctor) before acting on any information you find here. All trademarks
+				and copyrights mentioned remain the property of their respective owners.
+			</p>
+			<em
+				>This disclaimer is provided in accordance with Section 230 of the
+				Communications Decency Act (47 U.S.C. § 230), the United States
+				Copyright Act (Title 17, U.S.C.), and, for European users, Article 14 of
+				the E‑Commerce Directive (2000/31/EC) and Article 6 of the Directive on
+				Copyright in the Digital Single Market (EU 2019/790).</em
+			>
+		</section>
+		<section id="norwegian">
+			<h2>Norsk (bokmål)</h2>
+			<p>
+				<strong>Ansvarsfraskrivelse</strong><br />
+				Innholdet på denne bloggen er kun for informasjons- og utdanningsformål.
+				Meningene som uttrykkes her er forfatterens egne, og utgjør ikke
+				profesjonelle råd. Selv om jeg streber etter å holde informasjonen
+				oppdatert og nøyaktig, gir jeg ingen garantier&mdash;verken uttrykte
+				eller underforståtte&mdash;om innholdets fullstendighet, nøyaktighet,
+				pålitelighet, egnethet eller tilgjengelighet.
+			</p>
+			<p>
+				All bruk av slik informasjon er helt på egen risiko. Jeg er ikke
+				ansvarlig for tap eller skader som måtte oppstå som følge av bruk av
+				innholdet.
+			</p>
+			<p>
+				Vennligst konsulter en kvalifisert fagperson (for eksempel advokat,
+				regnskapsfører eller lege) før du handler basert på informasjon du
+				finner her. Alle varemerker og opphavsrettigheter som nevnes, tilhører
+				sine respektive eiere.
+			</p>
+			<em
+				>Denne ansvarsfraskrivelsen er gitt i henhold til åndsverkloven (lov om
+				opphavsrett til åndsverk) § 1 og markedsføringsloven § 6a.</em
+			>
+		</section>
+		<section id="russian">
+			<h2>Русский</h2>
+			<p>
+				<strong>Отказ от ответственности</strong><br />
+				Содержимое этого блога предназначено исключительно для информационных и
+				образовательных целей. Мнения, выраженные здесь, являются личными
+				взглядами автора и не являются профессиональной консультацией. Хотя я
+				стремлюсь поддерживать информацию актуальной и точной, я не даю никаких
+				заявлений или гарантий&mdash;явных или
+				подразумеваемых&mdash;относительно полноты, точности, надежности,
+				пригодности или доступности любого содержимого.
+			</p>
+			<p>
+				Любое использование данной информации осуществляется на ваш собственный
+				риск. Я не несу ответственности за любые убытки или вред, возникшие в
+				результате её использования.
+			</p>
+			<p>
+				Пожалуйста, проконсультируйтесь с квалифицированным специалистом
+				(например, юристом, бухгалтером или врачом) перед тем, как действовать
+				на основе информации, представленной здесь. Все товарные знаки и
+				авторские права, упомянутые здесь, принадлежат их законным владельцам.
+			</p>
+			<em
+				>Данный отказ от ответственности предоставлен в соответствии с частью IV
+				«Гражданского кодекса Российской Федерации» (вопросы авторского права) и
+				Федеральным законом от 07.07.2003 N 126‑ФЗ «О связи».</em
+			>
+		</section>
+
+		<section id="german">
+			<h2>Deutsch</h2>
+			<p>
+				<strong>Haftungsausschluss</strong><br />
+				Die Inhalte dieses Blogs dienen ausschließlich Informations- und
+				Bildungszwecken. Die geäußerten Meinungen stammen vom Autor und stellen
+				keine professionelle Beratung dar. Obwohl ich mich bemühe, die Inhalte
+				aktuell und korrekt zu halten, übernehme ich keine Gewähr – weder
+				ausdrücklich noch stillschweigend – für die Vollständigkeit,
+				Richtigkeit, Verlässlichkeit, Eignung oder Verfügbarkeit der
+				bereitgestellten Informationen.
+			</p>
+			<p>
+				Jegliche Nutzung dieser Informationen erfolgt auf eigene Gefahr. Ich
+				übernehme keine Haftung für etwaige Verluste oder Schäden infolge der
+				Verwendung.
+			</p>
+			<p>
+				Bitte ziehen Sie eine qualifizierte Fachperson (z. B. Anwalt,
+				Steuerberater, Arzt) zu Rate, bevor Sie auf Grundlage dieser Inhalte
+				handeln. Alle genannten Marken und Urheberrechte bleiben Eigentum ihrer
+				jeweiligen Inhaber.
+			</p>
+			<em
+				>Dieser Haftungsausschluss erfolgt gemäß § 7 TMG (Telemediengesetz),
+				§ 10 UrhG (Urheberrechtsgesetz) sowie der Datenschutz-Grundverordnung
+				(DSGVO – Verordnung (EU) 2016/679).</em
+			>
+		</section>
+
+		<section id="french">
+			<h2>Français</h2>
+			<p>
+				<strong>Avertissement</strong><br />
+				Le contenu de ce blog est fourni à titre informatif et éducatif
+				uniquement. Les opinions exprimées sont celles de l’auteur et ne
+				constituent pas des conseils professionnels. Bien que je m’efforce de
+				maintenir les informations à jour et exactes, je ne fais aucune
+				déclaration ni garantie – expresse ou implicite – quant à leur
+				exhaustivité, exactitude, fiabilité, pertinence ou disponibilité.
+			</p>
+			<p>
+				L’utilisation de ces informations se fait à vos propres risques. Je ne
+				pourrai être tenu responsable de toute perte ou dommage résultant de
+				leur utilisation.
+			</p>
+			<p>
+				Veuillez consulter un professionnel qualifié (par ex. avocat, comptable,
+				médecin) avant d’agir sur la base des informations ici présentes. Toutes
+				les marques et droits d’auteur mentionnés appartiennent à leurs
+				propriétaires respectifs.
+			</p>
+			<em
+				>Cette clause est fournie conformément à la Loi pour la Confiance dans
+				l'Économie Numérique (LCEN), au Code de la propriété intellectuelle, au
+				RGPD (Règlement (UE) 2016/679), ainsi qu’à la directive européenne
+				2019/790 sur le droit d’auteur dans le marché numérique unique.</em
+			>
+		</section>
+
+		<section id="spanish">
+			<h2>Español</h2>
+			<p>
+				<strong>Descargo de responsabilidad</strong><br />
+				El contenido de este blog es únicamente informativo y educativo. Las
+				opiniones expresadas son del autor y no constituyen asesoramiento
+				profesional. Aunque intento mantener la información actualizada y
+				precisa, no ofrezco garantías — explícitas ni implícitas — sobre su
+				integridad, precisión, fiabilidad, idoneidad o disponibilidad.
+			</p>
+			<p>
+				Cualquier uso de esta información corre bajo su propio riesgo. No me
+				hago responsable de pérdidas o daños que puedan surgir del uso de este
+				contenido.
+			</p>
+			<p>
+				Consulte con un profesional calificado (por ejemplo, abogado, contador,
+				médico) antes de actuar con base en esta información. Todas las marcas
+				registradas y derechos de autor mencionados son propiedad de sus
+				respectivos titulares.
+			</p>
+			<em
+				>Este aviso se proporciona conforme al Reglamento General de Protección
+				de Datos (RGPD - Reglamento (UE) 2016/679), la Ley de Servicios de la
+				Sociedad de la Información (LSSI), y otras leyes aplicables en España y
+				Latinoamérica.</em
+			>
+		</section>
+		<section id="chinese">
+			<h2>中文（简体）</h2>
+			<p>
+				<strong>免责声明</strong><br />
+				本博客中的内容仅用于信息和教育目的。此处表达的观点仅代表作者本人，不构成专业建议。尽管我会尽力保持信息的最新性和准确性，但对于任何内容的完整性、准确性、可靠性、适用性或可用性，我不作任何明示或暗示的陈述或保证。
+			</p>
+			<p>
+				您对该等信息的任何依赖均自行承担风险。我不对因使用这些信息而导致的任何损失或损害承担责任。
+			</p>
+			<p>
+				在根据此处信息采取任何行动之前，请咨询合格的专业人士（例如律师、会计师或医生）。所有提及的商标和版权均归其各自所有者所有。
+			</p>
+			<em
+				>本免责声明依据《中华人民共和国著作权法》和《中华人民共和国网络安全法》提供。</em
+			>
+		</section>
+
+		<section id="arabic" dir="rtl">
+			<h2>العربية</h2>
+			<p>
+				<strong>تنويه</strong><br />
+				محتوى هذه المدونة مخصص لأغراض إعلامية وتعليمية فقط. الآراء المعروضة تمثل
+				رأي الكاتب الشخصي ولا تُعتبر مشورة مهنية. بالرغم من أنني أسعى لتوفير
+				معلومات دقيقة ومحدثة، فإنني لا أقدم أي ضمانات — صريحة أو ضمنية — بشأن
+				اكتمال أو دقة أو موثوقية أو ملاءمة المعلومات.
+			</p>
+			<p>
+				أي استخدام للمحتوى يكون على مسؤوليتك الخاصة. لن أتحمل أي مسؤولية عن أي
+				خسائر أو أضرار ناتجة عن استخدام هذه المعلومات.
+			</p>
+			<p>
+				يرجى استشارة متخصص مؤهل (مثل محامٍ أو محاسب أو طبيب) قبل اتخاذ أي إجراء
+				بناءً على ما ورد هنا. جميع العلامات التجارية وحقوق النشر المذكورة تعود
+				لأصحابها الشرعيين.
+			</p>
+			<em
+				>تم إعداد هذا التنويه وفقًا للائحة العامة لحماية البيانات (GDPR -
+				اللائحة الأوروبية رقم 2016/679)، وللتشريعات المحلية المعمول بها في الدول
+				العربية، وقوانين حماية الخصوصية وحقوق النشر.</em
+			>
+		</section>
+
+		<footer>
+			<p>
+				© <span id="year"></span> Ustin M. Vaskin –
+				<a href="mailto:ustin.vaskin2011@gmail.com"
+					>ustin.vaskin2011@gmail.com</a
+				>
+			</p>
+		</footer>
+
+		<!-- Scripts -->
+		<script>
+			document.getElementById("year").textContent = new Date().getFullYear();
+
+			function toggleNav() {
+				const menu = document.getElementById("mobile-menu");
+				const isOpen = menu.classList.toggle("open");
+				document.body.style.overflow = isOpen ? "hidden" : "auto";
+			}
+
+			document.getElementById("theme-toggle").addEventListener("click", () => {
+				const html = document.documentElement;
+				const current = html.getAttribute("data-theme");
+				const next = current === "dark" ? "light" : "dark";
+				html.setAttribute("data-theme", next);
+				localStorage.setItem("preferred-theme", next);
+			});
+
+			(function () {
+				const saved = localStorage.getItem("preferred-theme");
+				if (saved) {
+					document.documentElement.setAttribute("data-theme", saved);
+				}
+			})();
+		</script>
+	</body>
 </html>
